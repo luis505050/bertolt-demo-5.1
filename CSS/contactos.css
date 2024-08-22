@@ -1,0 +1,129 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 10px 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Navigation Bar */
+.container-nav-bar {
+    background-color: #34495e;
+    position: relative;
+    z-index: 1000;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #ecf0f1;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-toggle-icon::before {
+    content: '☰'; /* Hamburger icon */
+}
+
+.container-nav-bar {
+    background-color: #34495e;
+    position: relative;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    background-color: #2980b9;
+    border-radius: 4px;
+}
+
+.nav-menu.active {
+    display: flex;
+    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .container-nav-bar {
+        background-color: transparent; /* Hide background when collapsed */
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #34495e;
+        width: 50%;
+        text-align: center;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    .nav-menu li a {
+        display: block;
+        padding: 10px;
+    }
+    .header-title {
+        margin-left: 0;
+        font-size: 20px;
+    }
+}
+/*  */
+.container-copyright {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
